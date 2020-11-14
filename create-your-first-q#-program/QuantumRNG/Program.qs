@@ -2,7 +2,8 @@ namespace QuantumRNG {
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Measurement;
-    
+    open Microsoft.Quantum.Math;
+    open Microsoft.Quantum.Convert;    
 
     @EntryPoint()
     operation GenerateRandomBit() : Result {
