@@ -5,7 +5,6 @@ namespace QuantumRNG {
     open Microsoft.Quantum.Math;
     open Microsoft.Quantum.Convert;    
 
-    @EntryPoint()
     operation GenerateRandomBit() : Result {
         // Allocate a qbit.
         using (q = Qubit()) {
@@ -27,5 +26,12 @@ namespace QuantumRNG {
             set output = ResultArrayAsInt(bits);
         } until (output <= max);
         return output;
+
+    }
+    @EntryPoint()
+    operation SampleRandomNumber() : Int {
+        let max = 50;
+        Message($"Sampling a random number between 0 and {max}: ");
+        return SampleRandomNumberInRange(max);
     }
 }
