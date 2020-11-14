@@ -1,11 +1,9 @@
 namespace HelloQuantum {
-    
-    open Microsoft.Quantum.Canon;
-    open Microsoft.Quantum.Intrinsic;
-    
+
+    open Microsoft.Quantum.Canon;    
 
     @EntryPoint()
     operation HelloQ() : Unit {
-        Message("Hello quantum world!");
+        Microsoft.Quantum.Intrinsic.Message("Hello quantum world!");
     }
 }
